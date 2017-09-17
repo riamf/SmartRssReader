@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7255B6301F670A210054CB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B62F1F670A210054CB04 /* AppDelegate.swift */; };
-		7255B6321F670A210054CB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6311F670A210054CB04 /* ViewController.swift */; };
 		7255B6351F670A210054CB04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7255B6331F670A210054CB04 /* Main.storyboard */; };
 		7255B6371F670A210054CB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7255B6361F670A210054CB04 /* Assets.xcassets */; };
 		7255B63A1F670A210054CB04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7255B6381F670A210054CB04 /* LaunchScreen.storyboard */; };
 		7255B6451F670A220054CB04 /* SmartRssReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6441F670A220054CB04 /* SmartRssReaderTests.swift */; };
 		7255B6501F670A220054CB04 /* SmartRssReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B64F1F670A220054CB04 /* SmartRssReaderUITests.swift */; };
+		7255B6601F670B010054CB04 /* ChanelProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B65F1F670B010054CB04 /* ChanelProviding.swift */; };
+		7255B6631F670B300054CB04 /* ChanelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6621F670B300054CB04 /* ChanelType.swift */; };
+		7255B6651F670E9B0054CB04 /* ChanelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */; };
+		7255B6671F670F060054CB04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6661F670F060054CB04 /* MainViewController.swift */; };
+		72EB8EDC1F6EBE4C00CD0B45 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */; };
+		72EB8EDE1F6EC78300CD0B45 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EDD1F6EC78300CD0B45 /* Result.swift */; };
+		72FCFB0F1F6D78E200815CB2 /* AbstractNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */; };
+		72FCFB111F6D798800815CB2 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCFB101F6D798800815CB2 /* FeedType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 /* Begin PBXFileReference section */
 		7255B62C1F670A210054CB04 /* SmartRssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7255B62F1F670A210054CB04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7255B6311F670A210054CB04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7255B6341F670A210054CB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7255B6361F670A210054CB04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7255B6391F670A210054CB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		7255B64B1F670A220054CB04 /* SmartRssReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartRssReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7255B64F1F670A220054CB04 /* SmartRssReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRssReaderUITests.swift; sourceTree = "<group>"; };
 		7255B6511F670A220054CB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7255B65F1F670B010054CB04 /* ChanelProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChanelProviding.swift; path = Providers/ChanelProviding.swift; sourceTree = "<group>"; };
+		7255B6621F670B300054CB04 /* ChanelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChanelType.swift; path = Models/ChanelType.swift; sourceTree = "<group>"; };
+		7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChanelsViewController.swift; path = ViewControllers/ChanelsViewController.swift; sourceTree = "<group>"; };
+		7255B6661F670F060054CB04 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestFactory.swift; path = Network/RequestFactory.swift; sourceTree = "<group>"; };
+		72EB8EDD1F6EC78300CD0B45 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Network/Result.swift; sourceTree = "<group>"; };
+		72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractNetwork.swift; path = Network/AbstractNetwork.swift; sourceTree = "<group>"; };
+		72FCFB101F6D798800815CB2 /* FeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedType.swift; path = Models/FeedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +111,11 @@
 		7255B62E1F670A210054CB04 /* SmartRssReader */ = {
 			isa = PBXGroup;
 			children = (
+				72FCFB0D1F6D785F00815CB2 /* Network */,
+				7255B6611F670B1A0054CB04 /* Models */,
+				7255B65E1F670AC50054CB04 /* Providers */,
+				7255B65D1F670A920054CB04 /* ViewControllers */,
 				7255B62F1F670A210054CB04 /* AppDelegate.swift */,
-				7255B6311F670A210054CB04 /* ViewController.swift */,
 				7255B6331F670A210054CB04 /* Main.storyboard */,
 				7255B6361F670A210054CB04 /* Assets.xcassets */,
 				7255B6381F670A210054CB04 /* LaunchScreen.storyboard */,
@@ -123,6 +140,42 @@
 				7255B6511F670A220054CB04 /* Info.plist */,
 			);
 			path = SmartRssReaderUITests;
+			sourceTree = "<group>";
+		};
+		7255B65D1F670A920054CB04 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */,
+				7255B6661F670F060054CB04 /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7255B65E1F670AC50054CB04 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				7255B65F1F670B010054CB04 /* ChanelProviding.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		7255B6611F670B1A0054CB04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7255B6621F670B300054CB04 /* ChanelType.swift */,
+				72FCFB101F6D798800815CB2 /* FeedType.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		72FCFB0D1F6D785F00815CB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */,
+				72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */,
+				72EB8EDD1F6EC78300CD0B45 /* Result.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7255B6321F670A210054CB04 /* ViewController.swift in Sources */,
+				72EB8EDE1F6EC78300CD0B45 /* Result.swift in Sources */,
+				72EB8EDC1F6EBE4C00CD0B45 /* RequestFactory.swift in Sources */,
+				7255B6651F670E9B0054CB04 /* ChanelsViewController.swift in Sources */,
+				7255B6631F670B300054CB04 /* ChanelType.swift in Sources */,
+				72FCFB0F1F6D78E200815CB2 /* AbstractNetwork.swift in Sources */,
+				72FCFB111F6D798800815CB2 /* FeedType.swift in Sources */,
+				7255B6601F670B010054CB04 /* ChanelProviding.swift in Sources */,
 				7255B6301F670A210054CB04 /* AppDelegate.swift in Sources */,
+				7255B6671F670F060054CB04 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +576,7 @@
 				7255B6561F670A220054CB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7255B6571F670A220054CB04 /* Build configuration list for PBXNativeTarget "SmartRssReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +585,7 @@
 				7255B6591F670A220054CB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7255B65A1F670A220054CB04 /* Build configuration list for PBXNativeTarget "SmartRssReaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +594,7 @@
 				7255B65C1F670A220054CB04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
