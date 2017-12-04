@@ -8,10 +8,31 @@
 
 import Foundation
 
-protocol FeedType {
+struct Feed {
+    let title: String
+    let link: String
+    let pubDate: String
     
+    init(title: String, link: String, pubDate: String) {
+        
+        self.title = title
+        self.link = link
+        self.pubDate = pubDate
+    }
+    
+    init?(title: String?, link: String?, pubDate: String?) {
+        guard let title = title,
+              let link = link,
+              let pubDate = pubDate else { return nil }
+        
+        self.title = title
+        self.link = link
+        self.pubDate = pubDate
+    }
 }
 
-struct Feed: FeedType {
-    
+extension Feed {
+    var viewModel: FeedCellViewModel {
+        return FeedCellViewModel(title: title, description: link, feed: self)
+    }
 }

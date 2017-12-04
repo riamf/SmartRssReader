@@ -11,7 +11,7 @@ import Foundation
 typealias FetchFeedsCompletion = ((Result<[Feed], NetworkError>) -> ())
 
 protocol AbstractNetwork {
-    
+    @discardableResult
     func fetchFeeds(from: ChanelType, completion: @escaping FetchFeedsCompletion) -> URLSessionTask
 }
 
@@ -25,21 +25,28 @@ class Network: AbstractNetwork {
        return RequestFactory()
     }()
     
+    private lazy var parser: FeedParser = {
+        return FeedParser()
+    }()
+    
     @discardableResult
     func fetchFeeds(from: ChanelType, completion: @escaping FetchFeedsCompletion) -> URLSessionTask {
         
         let request = requestFactory.request(with: from)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                completion(.error(.httpCode(error.localizedDescription)))
-                return
-            } else if let data = data {
-                completion(.success([]))
-                return
+        let task = session.dataTask(with: request) { [weak self] (data, response, error) in
+            DispatchQueue.main.async {
+                guard let strongSelf = self else { return }
+                
+                if let error = error {
+                    completion(.error(.httpCode(error.localizedDescription)))
+                    return
+                } else if let data = data {
+                    completion(.success(strongSelf.parser.parse(data: data)))
+                    return
+                }
+                
+                completion(.error(.unknown))
             }
-            
-            completion(.error(.unknown))
         }
         
         task.resume()

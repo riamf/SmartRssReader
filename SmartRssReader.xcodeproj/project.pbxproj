@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72142F3B1F7C15B90097A44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72142F3A1F7C15B90097A44E /* Logger.swift */; };
+		72142F3D1F7C19070097A44E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72142F3C1F7C19070097A44E /* FavouriteViewController.swift */; };
+		7214E42D1F7D639000665431 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214E42C1F7D639000665431 /* FavouriteCell.swift */; };
 		7255B6301F670A210054CB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B62F1F670A210054CB04 /* AppDelegate.swift */; };
 		7255B6351F670A210054CB04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7255B6331F670A210054CB04 /* Main.storyboard */; };
 		7255B6371F670A210054CB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7255B6361F670A210054CB04 /* Assets.xcassets */; };
@@ -17,8 +20,14 @@
 		7255B6631F670B300054CB04 /* ChanelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6621F670B300054CB04 /* ChanelType.swift */; };
 		7255B6651F670E9B0054CB04 /* ChanelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */; };
 		7255B6671F670F060054CB04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7255B6661F670F060054CB04 /* MainViewController.swift */; };
+		728595C61F796F6E00C83148 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728595C51F796F6E00C83148 /* Extensions.swift */; };
+		728595C91F79743B00C83148 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728595C81F79743B00C83148 /* CoreDataStack.swift */; };
 		72EB8EDC1F6EBE4C00CD0B45 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */; };
 		72EB8EDE1F6EC78300CD0B45 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EDD1F6EC78300CD0B45 /* Result.swift */; };
+		72EB8EE01F6ED4D300CD0B45 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EDF1F6ED4D300CD0B45 /* Parser.swift */; };
+		72EB8EE61F70375700CD0B45 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB8EE51F70375700CD0B45 /* FeedCell.swift */; };
+		72EB8EE71F703AA300CD0B45 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EB8EE21F6ED59400CD0B45 /* AEXML.framework */; };
+		72EB8EE81F703AA300CD0B45 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72EB8EE21F6ED59400CD0B45 /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72FCFB0F1F6D78E200815CB2 /* AbstractNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */; };
 		72FCFB111F6D798800815CB2 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCFB101F6D798800815CB2 /* FeedType.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +49,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		72EB8EE91F703AA300CD0B45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72EB8EE81F703AA300CD0B45 /* AEXML.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		72142F3A1F7C15B90097A44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Logger/Logger.swift; sourceTree = "<group>"; };
+		72142F3C1F7C19070097A44E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouriteViewController.swift; path = ViewControllers/FavouriteViewController.swift; sourceTree = "<group>"; };
+		7214E42C1F7D639000665431 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouriteCell.swift; path = Views/FavouriteCell.swift; sourceTree = "<group>"; };
 		7255B62C1F670A210054CB04 /* SmartRssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7255B62F1F670A210054CB04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7255B6341F670A210054CB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,8 +83,13 @@
 		7255B6621F670B300054CB04 /* ChanelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChanelType.swift; path = Models/ChanelType.swift; sourceTree = "<group>"; };
 		7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChanelsViewController.swift; path = ViewControllers/ChanelsViewController.swift; sourceTree = "<group>"; };
 		7255B6661F670F060054CB04 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		728595C51F796F6E00C83148 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Utils/Extensions.swift; sourceTree = "<group>"; };
+		728595C81F79743B00C83148 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = CoreData/CoreDataStack.swift; sourceTree = "<group>"; };
 		72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestFactory.swift; path = Network/RequestFactory.swift; sourceTree = "<group>"; };
 		72EB8EDD1F6EC78300CD0B45 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Network/Result.swift; sourceTree = "<group>"; };
+		72EB8EDF1F6ED4D300CD0B45 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Network/Parser.swift; sourceTree = "<group>"; };
+		72EB8EE21F6ED59400CD0B45 /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AEXML.framework; path = Carthage/Build/iOS/AEXML.framework; sourceTree = "<group>"; };
+		72EB8EE51F70375700CD0B45 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = Views/FeedCell.swift; sourceTree = "<group>"; };
 		72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractNetwork.swift; path = Network/AbstractNetwork.swift; sourceTree = "<group>"; };
 		72FCFB101F6D798800815CB2 /* FeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedType.swift; path = Models/FeedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EB8EE71F703AA300CD0B45 /* AEXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72142F391F7C159E0097A44E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				72142F3A1F7C15B90097A44E /* Logger.swift */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
 		7255B6231F670A210054CB04 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +135,7 @@
 				7255B6431F670A220054CB04 /* SmartRssReaderTests */,
 				7255B64E1F670A220054CB04 /* SmartRssReaderUITests */,
 				7255B62D1F670A210054CB04 /* Products */,
+				72EB8EE11F6ED59400CD0B45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +152,10 @@
 		7255B62E1F670A210054CB04 /* SmartRssReader */ = {
 			isa = PBXGroup;
 			children = (
+				72142F391F7C159E0097A44E /* Logger */,
+				728595C71F79742800C83148 /* CoreData */,
+				728595C41F796B8200C83148 /* Utils */,
+				72EB8EE41F70373E00CD0B45 /* Views */,
 				72FCFB0D1F6D785F00815CB2 /* Network */,
 				7255B6611F670B1A0054CB04 /* Models */,
 				7255B65E1F670AC50054CB04 /* Providers */,
@@ -147,6 +192,7 @@
 			children = (
 				7255B6641F670E9B0054CB04 /* ChanelsViewController.swift */,
 				7255B6661F670F060054CB04 /* MainViewController.swift */,
+				72142F3C1F7C19070097A44E /* FavouriteViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -168,12 +214,46 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		728595C41F796B8200C83148 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				728595C51F796F6E00C83148 /* Extensions.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		728595C71F79742800C83148 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				728595C81F79743B00C83148 /* CoreDataStack.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		72EB8EE11F6ED59400CD0B45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72EB8EE21F6ED59400CD0B45 /* AEXML.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72EB8EE41F70373E00CD0B45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72EB8EE51F70375700CD0B45 /* FeedCell.swift */,
+				7214E42C1F7D639000665431 /* FavouriteCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		72FCFB0D1F6D785F00815CB2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */,
 				72EB8EDB1F6EBE4C00CD0B45 /* RequestFactory.swift */,
 				72EB8EDD1F6EC78300CD0B45 /* Result.swift */,
+				72EB8EDF1F6ED4D300CD0B45 /* Parser.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -188,6 +268,7 @@
 				7255B6281F670A210054CB04 /* Sources */,
 				7255B6291F670A210054CB04 /* Frameworks */,
 				7255B62A1F670A210054CB04 /* Resources */,
+				72EB8EE91F703AA300CD0B45 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,12 +398,19 @@
 			files = (
 				72EB8EDE1F6EC78300CD0B45 /* Result.swift in Sources */,
 				72EB8EDC1F6EBE4C00CD0B45 /* RequestFactory.swift in Sources */,
+				72EB8EE01F6ED4D300CD0B45 /* Parser.swift in Sources */,
+				7214E42D1F7D639000665431 /* FavouriteCell.swift in Sources */,
 				7255B6651F670E9B0054CB04 /* ChanelsViewController.swift in Sources */,
+				72EB8EE61F70375700CD0B45 /* FeedCell.swift in Sources */,
 				7255B6631F670B300054CB04 /* ChanelType.swift in Sources */,
+				728595C91F79743B00C83148 /* CoreDataStack.swift in Sources */,
 				72FCFB0F1F6D78E200815CB2 /* AbstractNetwork.swift in Sources */,
+				728595C61F796F6E00C83148 /* Extensions.swift in Sources */,
 				72FCFB111F6D798800815CB2 /* FeedType.swift in Sources */,
 				7255B6601F670B010054CB04 /* ChanelProviding.swift in Sources */,
+				72142F3B1F7C15B90097A44E /* Logger.swift in Sources */,
 				7255B6301F670A210054CB04 /* AppDelegate.swift in Sources */,
+				72142F3D1F7C19070097A44E /* FavouriteViewController.swift in Sources */,
 				7255B6671F670F060054CB04 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +566,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EUR9M2AGH3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SmartRssReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = appdev4everyone.SmartRssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -491,11 +583,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EUR9M2AGH3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SmartRssReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = appdev4everyone.SmartRssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
