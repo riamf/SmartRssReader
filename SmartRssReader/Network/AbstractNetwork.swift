@@ -38,14 +38,22 @@ class Network: AbstractNetwork {
                 guard let strongSelf = self else { return }
                 
                 if let error = error {
-                    completion(.error(.httpCode(error.localizedDescription)))
+                    completion(
+                        .error(
+                            .httpCode(error
+                                .localizedDescription)))
                     return
                 } else if let data = data {
-                    completion(.success(strongSelf.parser.parse(data: data)))
+                    completion(
+                        .success(strongSelf
+                            .parser
+                            .parse(data: data)))
                     return
                 }
                 
-                completion(.error(.unknown))
+                completion(
+                    .error(
+                        .unknown))
             }
         }
         

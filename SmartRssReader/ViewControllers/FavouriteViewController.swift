@@ -23,9 +23,6 @@ class FavouriteViewController : UIViewController, StoreProviding {
         super.viewDidAppear(animated)
         
         feeds = store.getAllFeeds()
-        feeds.forEach {
-            print("\($0.title)")
-        }
         tableView.reloadData()
     }
 }

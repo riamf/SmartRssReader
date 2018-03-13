@@ -19,11 +19,17 @@ final class FeedCell: UITableViewCell {
     private var feed: Feed?
     private weak var delegate: FeedAdding?
     
-    func load(viewModel: FeedCellViewModel, feedAdding: FeedAdding?) {
+    func load(viewModel: FeedCellViewModel,
+              feedAdding: FeedAdding?) {
         delegate = feedAdding
         feed = viewModel.feed
         title.text = viewModel.title
         desc.text = viewModel.description
+        let add = UIButton(type: .contactAdd)
+        add.addTarget(self,
+                      action: #selector(addItem),
+                      for: .touchUpInside)
+        accessoryView = add
     }
     
     @IBAction private func addItem() {
