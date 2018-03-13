@@ -1,0 +1,15 @@
+PODS:
+  - AEXML (4.2.2)
+  - TensorFlow-experimental (1.1.1)
+
+DEPENDENCIES:
+  - AEXML
+  - TensorFlow-experimental
+
+SPEC CHECKSUMS:
+  AEXML: 5ebafc1b75e0bcf0f1b09b8ca8fed2d5a199479b
+  TensorFlow-experimental: c38ed2a43acaa2d42ce4174ac076efaa76e26a12
+
+PODFILE CHECKSUM: 996c7c1325e039c4e90ab23818b4c62a85606e96
+
+COCOAPODS: 1.2.0
