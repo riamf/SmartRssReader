@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2770E774325B51D1C3DB5C34 /* Pods_SmartRssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C774D954EB710D1791855701 /* Pods_SmartRssReader.framework */; };
 		72142F3B1F7C15B90097A44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72142F3A1F7C15B90097A44E /* Logger.swift */; };
 		72142F3D1F7C19070097A44E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72142F3C1F7C19070097A44E /* FavouriteViewController.swift */; };
 		7214E42D1F7D639000665431 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214E42C1F7D639000665431 /* FavouriteCell.swift */; };
@@ -92,6 +93,9 @@
 		72EB8EE51F70375700CD0B45 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = Views/FeedCell.swift; sourceTree = "<group>"; };
 		72FCFB0E1F6D78E200815CB2 /* AbstractNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractNetwork.swift; path = Network/AbstractNetwork.swift; sourceTree = "<group>"; };
 		72FCFB101F6D798800815CB2 /* FeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedType.swift; path = Models/FeedType.swift; sourceTree = "<group>"; };
+		C774D954EB710D1791855701 /* Pods_SmartRssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1452258FF641318281E3F65 /* Pods-SmartRssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRssReader/Pods-SmartRssReader.release.xcconfig"; sourceTree = "<group>"; };
+		F6D292BBFF7D56C8ED2C0215 /* Pods-SmartRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRssReader/Pods-SmartRssReader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72EB8EE71F703AA300CD0B45 /* AEXML.framework in Frameworks */,
+				2770E774325B51D1C3DB5C34 /* Pods_SmartRssReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B7AB287A567F5D5B519C04D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6D292BBFF7D56C8ED2C0215 /* Pods-SmartRssReader.debug.xcconfig */,
+				E1452258FF641318281E3F65 /* Pods-SmartRssReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		72142F391F7C159E0097A44E /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +150,7 @@
 				7255B64E1F670A220054CB04 /* SmartRssReaderUITests */,
 				7255B62D1F670A210054CB04 /* Products */,
 				72EB8EE11F6ED59400CD0B45 /* Frameworks */,
+				2B7AB287A567F5D5B519C04D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				72EB8EE21F6ED59400CD0B45 /* AEXML.framework */,
+				C774D954EB710D1791855701 /* Pods_SmartRssReader.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,10 +281,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7255B6541F670A220054CB04 /* Build configuration list for PBXNativeTarget "SmartRssReader" */;
 			buildPhases = (
+				00648D019662A8659747163B /* [CP] Check Pods Manifest.lock */,
 				7255B6281F670A210054CB04 /* Sources */,
 				7255B6291F670A210054CB04 /* Frameworks */,
 				7255B62A1F670A210054CB04 /* Resources */,
 				72EB8EE91F703AA300CD0B45 /* Embed Frameworks */,
+				DFD9B54B7A7654D058746461 /* [CP] Embed Pods Frameworks */,
+				46F4484644D90824A602513C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,6 +409,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00648D019662A8659747163B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46F4484644D90824A602513C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartRssReader/Pods-SmartRssReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFD9B54B7A7654D058746461 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartRssReader/Pods-SmartRssReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7255B6281F670A210054CB04 /* Sources */ = {
@@ -563,6 +630,7 @@
 		};
 		7255B6551F670A220054CB04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D292BBFF7D56C8ED2C0215 /* Pods-SmartRssReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EUR9M2AGH3;
@@ -580,6 +648,7 @@
 		};
 		7255B6561F670A220054CB04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1452258FF641318281E3F65 /* Pods-SmartRssReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EUR9M2AGH3;
